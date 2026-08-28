@@ -32,7 +32,6 @@
     <a href="#experience" class="quick-nav-pill">💼 Experiencia</a>
     <a href="#skills" class="quick-nav-pill">🛠️ Competencias</a>
     <a href="#certifications" class="quick-nav-pill">📜 Licencias</a>
-    <a href="#simulator" class="quick-nav-pill">⚙️ Simulador GSD</a>
   </nav>
 
   <main>
@@ -691,81 +690,6 @@
         </div>
       </div>
     </section>
-
-    <!-- WIDGET TÉCNICO INTERACTIVO: SIMULADOR FOTOGRAMÉTRICO -->
-    <aside class="interactive-aside" id="simulator" aria-label="Herramienta interactiva de fotogrametría">
-      <div class="interactive-header">
-        <span class="badge-tech">Herramienta Interactiva</span>
-        <h3>Simulador de Parámetros Fotogramétricos (GSD & Escala)</h3>
-      </div>
-      <p class="interactive-description">
-        Calcula la resolución espacial en terreno (<strong>GSD</strong>) y la huella del sensor según la altura de vuelo para planificación de misiones con RPA:
-      </p>
-
-      <div class="calculator-grid">
-        <div class="calc-control">
-          <label for="sensor-select">Sensor / Dron:</label>
-          <select id="sensor-select" onchange="calculateGSD()">
-            <optgroup label="Drones Compactos de Mapeo">
-              <option value="mavic3_ent" selected>DJI Mavic 3 Enterprise (M3E) · 20MP</option>
-              <option value="mavic3_multispectral">DJI Mavic 3 Multispectral (M3M) · 20MP</option>
-              <option value="mavic3_thermal_rgb">DJI Mavic 3 Thermal (M3T) · 48MP</option>
-            </optgroup>
-            <optgroup label="Sistemas Industriales & Topografía">
-              <option value="matrice_4e">DJI Matrice 4E · 20MP</option>
-              <option value="dji_zenmuse_p1">DJI Zenmuse P1 (Full Frame 45MP)</option>
-              <option value="dji_zenmuse_l2_rgb">DJI Zenmuse L2 / L1 (RGB 20MP)</option>
-              <option value="matrice_30t">DJI Matrice 30T · 48MP</option>
-            </optgroup>
-            <optgroup label="Ala Fija & Referencias">
-              <option value="wingtra_rx1r2">WingtraOne GEN II (Sony 42MP)</option>
-              <option value="phantom4_rtk">DJI Phantom 4 RTK · 20MP</option>
-            </optgroup>
-          </select>
-        </div>
-
-        <div class="calc-control">
-          <label for="flight-height">Altura de Vuelo (H): <span id="height-val">80</span> m</label>
-          <input type="range" id="flight-height" min="20" max="200" value="80" step="5" oninput="calculateGSD()" />
-        </div>
-      </div>
-
-      <div class="calc-results">
-        <div class="result-box">
-          <span class="result-label">GSD Estimado:</span>
-          <span class="result-value" id="res-gsd">2.19 cm/px</span>
-        </div>
-        <div class="result-box">
-          <span class="result-label">Huella en Terreno:</span>
-          <span class="result-value" id="res-footprint">119 × 79 m</span>
-        </div>
-        <div class="result-box">
-          <span class="result-label">Escala Fotográfica:</span>
-          <span class="result-value" id="res-scale">1 : 9,091</span>
-        </div>
-      </div>
-
-      <!-- Comparador Interactivo de Capas (Ortomosaico RGB vs Modelo Digital de Elevaciones) -->
-      <div class="layer-comparator-wrapper">
-        <p class="comparator-caption">Visualización interactiva: <strong>Ortomosaico RGB / Termografía</strong> vs. <strong>MDT / Alticromía</strong></p>
-        <div class="comparison-container" id="compare-container">
-          <div class="layer-base" id="layer-dem">
-            <div class="dem-visual">
-              <div class="contour-grid"></div>
-              <span class="layer-badge dem-badge">Modelo Digital de Elevación (DEM)</span>
-            </div>
-          </div>
-          <div class="layer-overlay" id="layer-rgb">
-            <div class="rgb-visual">
-              <div class="satellite-pattern"></div>
-              <span class="layer-badge rgb-badge">Ortomosaico RGB / Ortofoto</span>
-            </div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="slider-divider" id="layer-slider"
-            oninput="slideLayer(this.value)" aria-label="Deslizador de comparación de capas" />
-        </div>
-      </div>
-    </aside>
 
     <!-- FOOTER -->
     <footer class="site-footer">
