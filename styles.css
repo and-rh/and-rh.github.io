@@ -1291,11 +1291,59 @@ input[type="range"] {
 }
 
 .thesis-name {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 700;
   color: var(--color-slate-900);
-  line-height: 1.45;
+  line-height: 1.42;
+  margin-bottom: 12px;
+}
+
+.thesis-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   margin-bottom: 14px;
+  font-size: 0.82rem;
+  color: var(--color-slate-700);
+  line-height: 1.5;
+  background: var(--color-slate-50);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-slate-200);
+}
+
+.thesis-author-row {
+  color: var(--color-slate-800);
+}
+
+.thesis-case-study {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.thesis-work-desc {
+  color: var(--color-slate-700);
+}
+
+.thesis-work-desc strong {
+  color: var(--color-slate-900);
+}
+
+.thesis-acknowledgment {
+  margin-top: 4px;
+  padding: 6px 10px;
+  background: #fefce8;
+  border: 1px solid #fef08a;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  color: #854d0e;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.featured-thesis {
+  border-color: #bfdbfe;
+  background: #ffffff;
 }
 
 .thesis-author-info {
