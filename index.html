@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>André Vargas Peña | Constructor Civil · Fotogrametría & QA/QC</title>
+  <meta name="description"
+    content="Portafolio profesional de André Hernán Vargas Peña. Constructor Civil especializado en geomensura, fotogrametría con RPA, QA/QC y análisis geoespacial." />
+  
+  <!-- TIPOGRAFÍA GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- LEAFLET WEBMAP ASSETS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin=""></script>
+</head>
+
+<body>
+  <!-- BARRA DE NAVEGACIÓN RÁPIDA -->
+  <nav class="quick-nav" aria-label="Navegación de secciones">
+    <a href="#about" class="quick-nav-pill">👤 Perfil</a>
+    <a href="#surveys" class="quick-nav-pill">🗺️ Levantamientos</a>
+    <a href="#news" class="quick-nav-pill">📰 Noticias & Medios</a>
+    <a href="#publications" class="quick-nav-pill">📑 Publicaciones</a>
+    <a href="#experience" class="quick-nav-pill">💼 Experiencia</a>
+    <a href="#skills" class="quick-nav-pill">🛠️ Competencias</a>
+    <a href="#certifications" class="quick-nav-pill">📜 Licencias</a>
+    <a href="#simulator" class="quick-nav-pill">⚙️ Simulador GSD</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="hero">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Disponible para Levantamientos & Asesorías Técnicas
+      </div>
+
+      <div class="avatar-container">
+        <img src="assets/perfil.jpg" alt="André Hernán Vargas Peña" class="avatar-img"
+          onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/pw/AP1GczOg8KvvfWF-GN9hAdB4kxttBAolfWx1b2FAima3zIDpEJg-hLpc79u1jN_LOfVc8mQK9mw3q2bnyeNASITAYh7GciibEZSnmpbDkNaVrFXpF6qecBuN=w600';" />
+      </div>
+
+      <h1 id="user-name">André Hernán Vargas Peña</h1>
+      
+      <p class="subtitle" id="user-title">
+        Constructor Civil · Geomensura, Fotogrametría & Aseguramiento de Calidad (QA/QC)
+      </p>
+
+      <p class="location-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        La Florida, Región Metropolitana, Chile
+      </p>
+
+      <nav class="social-links" aria-label="Enlaces de contacto">
+        <a href="mailto:and-rh@uc.cl" id="link-email" title="Enviar correo electrónico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          and-rh@uc.cl
+        </a>
+
+        <a href="https://linkedin.com/in/and4772" target="_blank" rel="noopener" id="link-linkedin" title="Ver perfil en LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          LinkedIn
+        </a>
+
+        <a href="tel:+56977483866" id="link-phone" title="Llamar o contactar por WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +56 9 7748 3866
+        </a>
+
+        <a href="https://drive.google.com/file/d/19YQLZ9fTBMWJ0obk4gPYPqerDVlxbxq6/view?usp=sharing" target="_blank"
+          rel="noopener" class="print-btn" title="Abrir y Descargar CV (PDF) en Google Drive">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+          Descargar CV (PDF) ↗
+        </a>
+      </nav>
+    </header>
+
+    <!-- RESUMEN PROFESIONAL -->
+    <section id="about">
+      <h2>Resumen Profesional</h2>
+      <p>
+        Constructor Civil especializado en <strong>geomensura, fotogrametría y aseguramiento de calidad (QA/QC)</strong>. Experiencia técnica en la ejecución de levantamientos aerofotogramétricos mediante tecnología RPA, procesamiento de datos espaciales y configuración de equipos de medición GNSS RTK.
+      </p>
+      <p>
+        Trayectoria operativa en el control de calidad, calibración de sistemas de adquisición de datos y validación de metodologías de medición en terreno. Capacidad para automatizar flujos de trabajo y procesar datos mediante Python y Google Apps Script, optimizando el análisis de información geoespacial. Enfoque riguroso y analítico para la gestión de proyectos orientados a la planificación territorial y captura de datos de precisión.
+      </p>
+    </section>
+
+    <!-- COMPILADO DE LEVANTAMIENTOS FOTOGRAMÉTRICOS -->
+    <section id="surveys">
+      <div class="section-title-row">
+        <div>
+          <h2>Compilado de Levantamientos Fotogramétricos</h2>
+          <p class="section-subtitle">Registro de campañas de vuelo, misiones técnicas de emergencia e investigación geoespacial.</p>
+        </div>
+        <div class="filter-pills" id="survey-filters">
+          <button class="pill active" onclick="filterSurveys('all')">Todos</button>
+          <button class="pill" onclick="filterSurveys('investigacion')">Investigación & Termografía</button>
+          <button class="pill" onclick="filterSurveys('emergencia')">Misiones de Emergencia</button>
+          <button class="pill" onclick="filterSurveys('infraestructura')">Topografía & APR</button>
+        </div>
+      </div>
+
+      <div class="surveys-grid">
+
+        <!-- LEVANTAMIENTO 1: FONDEF -->
+        <article class="survey-card featured-survey" data-category="investigacion">
+          <div class="survey-header">
+            <div class="survey-title-group">
+              <span class="survey-date">09/2024 — 05/2025</span>
+              <h3>Levantamientos Aerofotogramétricos y Termográficos · Proyecto FONDEF ID23I10318</h3>
+            </div>
+            <span class="tag-status">I+D · Publicación DOI</span>
+          </div>
+
+          <p class="survey-desc">
+            Planificación y ejecución de misiones de vuelo multitemporales para captura de datos térmicos y fotogramétricos de alta resolución en zonas urbanas, orientados a la evaluación microclimática e islas de calor.
+          </p>
+
+          <div class="specs-table">
+            <div class="spec-item"><span class="spec-label">Tecnología:</span><span class="spec-val">RPA con sensor termográfico y óptico (DJI Mavic 3 Thermal)</span></div>
+            <div class="spec-item"><span class="spec-label">Ubicación:</span><span class="spec-val">Santiago, Chile</span></div>
+            <div class="spec-item"><span class="spec-label">Software:</span><span class="spec-val">Agisoft Metashape, ArcGIS Pro, Python</span></div>
+            <div class="spec-item"><span class="spec-label">Entregables:</span><span class="spec-val">Ortofotos térmicas calibradas, Modelos de Elevación (DEM), Análisis Espacial</span></div>
+          </div>
+
+          <!-- GALERÍA DE ANÁLISIS TÉRMICO Y FOTOGRAMÉTRICO (FONDEF) -->
+          <div class="sectors-gallery-section">
+            <div class="sectors-gallery-header">
+              <span class="sectors-label">🌡️ Análisis Termográfico y Fotogramétrico (Haz clic para inspeccionar con Zoom):</span>
+            </div>
+
+            <div class="sectors-grid sectors-grid-three">
+              <!-- FOTO 1: ORTOMOSAICO RGB -->
+              <div class="sector-card"
+                onclick="openOrthoModal('assets/fondef_ortomosaico_rgb.jpg', 'FONDEF · Ortomosaico Visible RGB', 'Levantamiento aerofotogramétrico óptico de alta resolución con RPA sobre corredor urbano para catastro de infraestructura verde y pavimentos.', 'assets/fondef_ortomosaico_rgb.jpg')">
+                <div class="sector-img-container">
+                  <img src="assets/fondef_ortomosaico_rgb.jpg" alt="Ortomosaico RGB - FONDEF"
+                    class="sector-thumbnail" loading="lazy" />
+                  <div class="sector-overlay">
+                    <span class="zoom-btn-badge">🔍 Inspeccionar (Zoom)</span>
+                  </div>
+                </div>
+                <div class="sector-card-info">
+                  <h4>1. Ortomosaico Visible RGB</h4>
+                  <span class="sector-badge">Alta Resolución Óptica · RPA</span>
+                </div>
+              </div>
+
+              <!-- FOTO 2: CLASIFICACIÓN TÉRMICA COLOR -->
+              <div class="sector-card"
+                onclick="openOrthoModal('assets/fondef_clasificacion_termica.jpg', 'FONDEF · Clasificación Térmica Multiclase (°C)', 'Mapa térmico categorizado por rangos de temperatura superficial (0°C a 70°C) para evaluación de confort microclimático y mitigación de islas de calor.', 'assets/fondef_clasificacion_termica.jpg')">
+                <div class="sector-img-container">
+                  <img src="assets/fondef_clasificacion_termica.jpg" alt="Clasificación Térmica Multiclase - FONDEF"
+                    class="sector-thumbnail" loading="lazy" />
+                  <div class="sector-overlay">
+                    <span class="zoom-btn-badge">🔍 Inspeccionar (Zoom)</span>
+                  </div>
+                </div>
+                <div class="sector-card-info">
+                  <h4>2. Clasificación Térmica (°C)</h4>
+                  <span class="sector-badge">Rangos 0°C a 70°C · ArcGIS Pro</span>
+                </div>
+              </div>
+
+              <!-- FOTO 3: RADIOMETRÍA ESCALA DE GRISES -->
+              <div class="sector-card"
+                onclick="openOrthoModal('assets/fondef_radiometria_escala_grises.jpg', 'FONDEF · Radiometría Térmica Continua', 'Termografía continua infrarroja (10°C a 70°C) calibrada para análisis de emisividad y comportamiento térmico de materiales urbanos.', 'assets/fondef_radiometria_escala_grises.jpg')">
+                <div class="sector-img-container">
+                  <img src="assets/fondef_radiometria_escala_grises.jpg" alt="Radiometría Térmica Directa - FONDEF"
+                    class="sector-thumbnail" loading="lazy" />
+                  <div class="sector-overlay">
+                    <span class="zoom-btn-badge">🔍 Inspeccionar (Zoom)</span>
+                  </div>
+                </div>
+                <div class="sector-card-info">
+                  <h4>3. Radiometría Térmica (10-70°C)</h4>
+                  <span class="sector-badge">Sensor Infrarrojo · Mavic 3T</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="deliverables" style="margin-top: 14px;">
+            <span class="deliverable-tag">Ortofotos Térmicas Calibradas</span>
+            <span class="deliverable-tag">Modelos Digitales de Elevación (DEM)</span>
+            <span class="deliverable-tag">Análisis de Infraestructura Verde</span>
+            <a href="https://doi.org/10.7764/978-956-425-393-0" target="_blank" rel="noopener" class="deliverable-tag deliverable-link">DOI: 10.7764/978-956-425-393-0 ↗</a>
+          </div>
+        </article>
+
+        <!-- LEVANTAMIENTO 2: MISIÓN VENEZUELA -->
+        <article class="survey-card featured-survey" data-category="emergencia">
+          <div class="survey-header">
+            <div class="survey-title-group">
+              <span class="survey-date">08/2026</span>
+              <h3>Inspección Técnica y Levantamiento Aéreo Post-Sismo</h3>
+            </div>
+            <span class="tag-status tag-emergency">Misión Internacional</span>
+          </div>
+
+          <p class="survey-desc">
+            Misión de apoyo técnico y levantamientos aerofotogramétricos con RPA en zonas urbanas e infraestructuras críticas afectadas por el terremoto de junio de 2026 para diagnóstico de daños y soporte a la evaluación estructural.
+          </p>
+
+          <div class="specs-table">
+            <div class="spec-item"><span class="spec-label">Ubicación:</span><span class="spec-val">Caraballeda y Catia La Mar, La Guaira, Venezuela</span></div>
+            <div class="spec-item"><span class="spec-label">Objetivo:</span><span class="spec-val">Evaluación rápida de daños, mapeo de colapsos y análisis estructural</span></div>
+            <div class="spec-item"><span class="spec-label">Equipamiento:</span><span class="spec-val">Drones RPA Serie Mavic</span></div>
+            <div class="spec-item"><span class="spec-label">Procesamiento:</span><span class="spec-val">Fotogrametría digital rápida, ortomosaicos y nubes de puntos 3D</span></div>
+          </div>
+
+          <!-- VISOR INTERACTIVO WEBMAP LEAFLET (CARABALLEDA - VENEZUELA) -->
+          <div class="webmap-wrapper">
+            <div class="webmap-header">
+              <span class="webmap-label">🗺️ Visor SIG Interactivo (Ortomosaico Post-Sismo · Sector Caraballeda):</span>
+              <div class="webmap-controls-inline">
+                <label for="caraballeda-opacity" class="opacity-label">Transparencia Capa:</label>
+                <input type="range" id="caraballeda-opacity" min="0" max="1" step="0.05" value="0.95"
+                  oninput="setCaraballedaOpacity(this.value)" title="Ajustar opacidad de ortomosaico" />
+                <button class="webmap-btn" onclick="resetCaraballedaView()" title="Centrar Caraballeda">🎯 Centrar</button>
+              </div>
+            </div>
+            <div id="caraballeda-map" class="survey-map-container"
+              aria-label="Mapa interactivo de ortomosaico Caraballeda Venezuela"></div>
+            <div class="webmap-footer">
+              <span class="webmap-hint">💡 Ortomosaico de alta resolución procesado en QGIS · Explora con zoom y arrastre.</span>
+            </div>
+          </div>
+
+          <div class="deliverables" style="margin-top: 14px;">
+            <span class="deliverable-tag">Mapeo de Zonas Afectadas</span>
+            <span class="deliverable-tag">Ortomosaico Sector Caraballeda</span>
+            <a href="https://www.uc.cl/noticias/uc-organiza-mision-para-evaluar-danos-estructurales-tras-terremotos-en-venezuela/"
+              target="_blank" rel="noopener" class="deliverable-tag deliverable-link">Nota UC Noticias ↗</a>
+            <a href="https://www.latercera.com/nacional/noticia/delegacion-de-expertos-viajara-a-venezuela-para-apoyar-en-evaluacion-y-reconstruccion-tras-los-terremotos/"
+              target="_blank" rel="noopener" class="deliverable-tag deliverable-link">La Tercera ↗</a>
+            <a href="https://www.instagram.com/p/DcRNwcaRXHr/" target="_blank" rel="noopener"
+              class="deliverable-tag deliverable-link">Registro Instagram ↗</a>
+          </div>
+        </article>
+
+        <!-- LEVANTAMIENTO 3: HIJUELAS / APR HUALCAPO -->
+        <article class="survey-card featured-survey" data-category="infraestructura">
+          <div class="survey-header">
+            <div class="survey-title-group">
+              <span class="survey-date">05/2024</span>
+              <h3>Levantamiento Topográfico & Trazado para Proyecto APR Hualcapo</h3>
+            </div>
+            <span class="tag-status">Puentes UC · Municipalidad</span>
+          </div>
+
+          <p class="survey-desc">
+            Levantamiento planialtimétrico en terreno para la planificación, diseño de trazados y ubicación de obras hidráulicas del sistema de Agua Potable Rural (APR) en el sector de Hualcapo, comuna de Hijuelas.
+          </p>
+
+          <div class="specs-table">
+            <div class="spec-item"><span class="spec-label">Ubicación:</span><span class="spec-val">Hualcapo, Hijuelas, Región de Valparaíso</span></div>
+            <div class="spec-item"><span class="spec-label">Coordinación:</span><span class="spec-val">Centro Puentes UC & Ilustre Municipalidad de Hijuelas</span></div>
+            <div class="spec-item"><span class="spec-label">Equipamiento:</span><span class="spec-val">Receptores GNSS RTK, Drone Serie Mavic</span></div>
+            <div class="spec-item"><span class="spec-label">Software:</span><span class="spec-val">AutoCAD Civil 3D, Agisoft Metashape</span></div>
+          </div>
+
+          <!-- VISOR INTERACTIVO WEBMAP LEAFLET (QGIS TILES) -->
+          <div class="webmap-wrapper">
+            <div class="webmap-header">
+              <span class="webmap-label">🗺️ Visor SIG Interactivo (Trazado y Levantamiento APR Hualcapo):</span>
+              <div class="webmap-controls-inline">
+                <label for="hualcapo-opacity" class="opacity-label">Transparencia Capa:</label>
+                <input type="range" id="hualcapo-opacity" min="0" max="1" step="0.05" value="0.9"
+                  oninput="setHualcapoOpacity(this.value)" title="Ajustar opacidad de capa QGIS" />
+                <button class="webmap-btn" onclick="resetHualcapoView()" title="Centrar Trazado">🎯 Centrar</button>
+              </div>
+            </div>
+            <div id="hualcapo-map" class="survey-map-container"
+              aria-label="Mapa interactivo de levantamiento APR Hualcapo"></div>
+            <div class="webmap-footer">
+              <span class="webmap-hint">💡 Capa georreferenciada procesada en QGIS · Usa el ratón o dedos para explorar y hacer zoom.</span>
+            </div>
+          </div>
+
+          <div class="deliverables" style="margin-top: 14px;">
+            <span class="deliverable-tag">Modelo Digital de Terreno (MDT)</span>
+            <span class="deliverable-tag">Perfiles Longitudinales de Trazado</span>
+            <span class="deliverable-tag">Curvas de Nivel de Detalle</span>
+            <a href="https://www.instagram.com/p/C6wBcmfOdhU/?img_index=1" target="_blank" rel="noopener"
+              class="deliverable-tag deliverable-link">Ver registro en Instagram ↗</a>
+          </div>
+        </article>
+
+        <!-- LEVANTAMIENTO 4: QUILPUÉ / INCENDIOS FORESTALES 2024 -->
+        <article class="survey-card featured-survey" data-category="emergencia">
+          <div class="survey-header">
+            <div class="survey-title-group">
+              <span class="survey-date">02/2024</span>
+              <h3>Levantamientos Fotogramétricos de Sectores Residenciales Afectados por Incendios</h3>
+            </div>
+            <span class="tag-status tag-emergency">Apoyo Municipal · Emergencia 2024</span>
+          </div>
+
+          <p class="survey-desc">
+            Vuelos aerofotogramétricos con RPA en apoyo técnico a la Municipalidad de Quilpué para el mapeo de alta resolución, catastro de edificaciones siniestradas y evaluación del impacto territorial tras los megaincendios forestales de febrero de 2024 en la Región de Valparaíso.
+          </p>
+
+          <div class="specs-table">
+            <div class="spec-item"><span class="spec-label">Ubicación:</span><span class="spec-val">Sectores Residenciales, Quilpué, Región de Valparaíso</span></div>
+            <div class="spec-item"><span class="spec-label">Contraparte:</span><span class="spec-val">Ilustre Municipalidad de Quilpué</span></div>
+            <div class="spec-item"><span class="spec-label">Tecnología:</span><span class="spec-val">Drones RPA Serie Mavic y Serie Phantom</span></div>
+            <div class="spec-item"><span class="spec-label">Software:</span><span class="spec-val">Agisoft Metashape, AutoCAD Civil 3D</span></div>
+          </div>
+
+          <!-- GALERÍA INTERACTIVA DE ORTOFOTOS POR SECTORES RESIDENCIALES -->
+          <div class="sectors-gallery-section">
+            <div class="sectors-gallery-header">
+              <span class="sectors-label">🗺️ Ortofotos por Sectores Residenciales (Haz clic para inspeccionar con Zoom y Paneo):</span>
+            </div>
+
+            <div class="sectors-grid sectors-grid-two">
+              <!-- SECTOR 1: CANAL CHACAO -->
+              <div class="sector-card"
+                onclick="openOrthoModal('assets/Ortofoto-Canal-Chacao.png', 'Quilpué · Sector Canal Chacao', 'Ortomosaico aerofotogramétrico de alta resolución del sector Canal Chacao. Levantamiento con drones RPA tras los incendios forestales de 2024 para catastro de edificaciones siniestradas y evaluación territorial.', 'assets/Ortofoto-Canal-Chacao.png')">
+                <div class="sector-img-container">
+                  <img src="assets/Ortofoto-Canal-Chacao.png" alt="Ortofoto Sector Canal Chacao - Quilpué"
+                    class="sector-thumbnail" loading="lazy" />
+                  <div class="sector-overlay">
+                    <span class="zoom-btn-badge">🔍 Inspeccionar Ortomosaico (Zoom)</span>
+                  </div>
+                </div>
+                <div class="sector-card-info">
+                  <h4>Sector Canal Chacao</h4>
+                  <span class="sector-badge">Alta Resolución (37.8 MB) · Ortofoto RPA</span>
+                </div>
+              </div>
+
+              <!-- SECTOR 2: POBLACIÓN ARGENTINA -->
+              <div class="sector-card"
+                onclick="openOrthoModal('assets/Ortofoto-Población-Argentina.png', 'Quilpué · Sector Población Argentina', 'Ortomosaico aerofotogramétrico de alta resolución del sector Población Argentina. Evaluación técnica post-emergencia para apoyo al catastro de daños y reconstrucción municipal.', 'assets/Ortofoto-Población-Argentina.png')">
+                <div class="sector-img-container">
+                  <img src="assets/Ortofoto-Población-Argentina.png" alt="Ortofoto Sector Población Argentina - Quilpué"
+                    class="sector-thumbnail" loading="lazy" />
+                  <div class="sector-overlay">
+                    <span class="zoom-btn-badge">🔍 Inspeccionar Ortomosaico (Zoom)</span>
+                  </div>
+                </div>
+                <div class="sector-card-info">
+                  <h4>Sector Población Argentina</h4>
+                  <span class="sector-badge">Alta Resolución (35.8 MB) · Ortofoto RPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="deliverables" style="margin-top: 14px;">
+            <span class="deliverable-tag">Ortomosaicos de Alta Resolución Post-Incendio</span>
+            <span class="deliverable-tag">Catastro Fotogramétrico de Afectación</span>
+            <span class="deliverable-tag">Modelos Digitales de Elevación (DEM)</span>
+            <a href="https://www.instagram.com/p/C3iLoLiuC3M/" target="_blank" rel="noopener"
+              class="deliverable-tag deliverable-link">Ver registro en Instagram ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="survey-custom-note">
+        <p>
+          <em>* Registro técnico de campañas aerofotogramétricas, misiones de emergencia e investigación científica con respaldo geodésico y radiométrico.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- NOTICIAS & HITOS EN MEDIOS -->
+    <section id="news">
+      <div class="section-title-row">
+        <div>
+          <h2>Noticias & Hitos Relevantes</h2>
+          <p class="section-subtitle">Cobertura, misiones técnicas de impacto y participación en proyectos de relevancia pública e internacional.</p>
+        </div>
+      </div>
+
+      <div class="news-grid">
+
+        <!-- NOTICIA 1: QUILPUÉ INCENDIOS -->
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-tag tag-intl">Respuesta a Emergencias</span>
+            <time class="news-date">Febrero 2024</time>
+          </div>
+          <h3 class="news-title">
+            Apoyo a la Municipalidad de Quilpué en Levantamientos Fotogramétricos tras Incendios Forestales
+          </h3>
+          <p class="news-source">Ilustre Municipalidad de Quilpué · Región de Valparaíso</p>
+          <p class="news-summary">
+            Despliegue operativo de drones RPA para la captura aerofotogramétrica y evaluación técnica de sectores residenciales afectados por los megaincendios de febrero de 2024 en Quilpué, generando ortomosaicos y datos geoespaciales clave para el catastro de daños y planificación de la reconstrucción.
+          </p>
+          <div class="news-highlights">
+            <span class="highlight-item">✓ Mapeo aéreo de zonas siniestradas</span>
+            <span class="highlight-item">✓ Cartografía de soporte municipal</span>
+          </div>
+          <a href="https://www.instagram.com/p/C3iLoLiuC3M/" target="_blank" rel="noopener" class="news-link">
+            Ver registro de la labor en Instagram ↗
+          </a>
+        </article>
+
+        <!-- NOTICIA 2: HIJUELAS APR PUENTES UC -->
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-tag tag-community">Vinculación & Comunidad</span>
+            <time class="news-date">Mayo 2024</time>
+          </div>
+          <h3 class="news-title">
+            Apoyo a la Municipalidad de Hijuelas en Levantamiento Topográfico para Proyecto APR Hualcapo
+          </h3>
+          <p class="news-source">Centro Puentes UC · Ilustre Municipalidad de Hijuelas</p>
+          <p class="news-summary">
+            Ejecución de levantamientos topográficos y recopilación de datos espaciales en terreno para la planificación y diseño del sistema de Agua Potable Rural (APR) en la localidad de Hualcapo, en estrecha colaboración entre la Municipalidad de Hijuelas y el Centro Puentes UC.
+          </p>
+          <div class="news-highlights">
+            <span class="highlight-item">✓ Geomensura y topografía aplicada</span>
+            <span class="highlight-item">✓ Impacto social en abastecimiento de agua rural</span>
+          </div>
+          <a href="https://www.instagram.com/p/C6wBcmfOdhU/?img_index=1" target="_blank" rel="noopener" class="news-link">
+            Ver publicación en Instagram de Puentes UC ↗
+          </a>
+        </article>
+
+        <!-- NOTICIA 3: MISIÓN VENEZUELA -->
+        <article class="news-card featured-news">
+          <div class="news-meta">
+            <span class="news-tag tag-intl">Misión Internacional</span>
+            <time class="news-date">Agosto 2026</time>
+          </div>
+          <h3 class="news-title">
+            Delegación Chilena y UC viaja a Venezuela para Apoyar en Evaluación Estructural y Fotogrametría tras Terremotos
+          </h3>
+          <p class="news-source">Cancillería (Minrel) · Pontificia Universidad Católica de Chile · Cobertura en Medios Nacionales</p>
+          <p class="news-summary">
+            Misión oficial de apoyo técnico y cooperación de emergencia tras el terremoto de junio de 2026 en Catia La Mar y La Guaira. Participación activa en levantamientos aerofotogramétricos con drones y diagnóstico de infraestructura dañada junto a la delegación de expertos chilenos.
+          </p>
+
+          <div class="news-highlights">
+            <span class="highlight-item">✓ Levantamientos aéreos de emergencia</span>
+            <span class="highlight-item">✓ Diagnóstico estructural post-evento</span>
+            <span class="highlight-item">✓ Cooperación bilateral Cancillería — UC</span>
+          </div>
+
+          <!-- ENLACES DE PRENSA Y COBERTURA MEDIÁTICA -->
+          <div class="press-coverage-box">
+            <span class="press-label">Cobertura en prensa y medios:</span>
+            <div class="press-links">
+              <a href="https://www.uc.cl/noticias/uc-organiza-mision-para-evaluar-danos-estructurales-tras-terremotos-en-venezuela/"
+                target="_blank" rel="noopener" class="press-pill">
+                🏛️ UC Noticias ↗
+              </a>
+              <a href="https://www.latercera.com/nacional/noticia/delegacion-de-expertos-viajara-a-venezuela-para-apoyar-en-evaluacion-y-reconstruccion-tras-los-terremotos/"
+                target="_blank" rel="noopener" class="press-pill">
+                📰 La Tercera ↗
+              </a>
+              <a href="https://www.radioagricultura.cl/noticias/internacional/cancilleria-y-universidad-catolica-envian-expertos-a-venezuela-tras-danos-por-terremotos_20260814/"
+                target="_blank" rel="noopener" class="press-pill">
+                📻 Radio Agricultura ↗
+              </a>
+              <a href="https://www.adnradio.cl/2026/08/14/chile-exporta-su-ingenieria-antisismica-delegacion-de-la-uc-viaja-a-venezuela-para-evaluar-estructuras-tras-terremotos/"
+                target="_blank" rel="noopener" class="press-pill">
+                📻 Radio ADN ↗
+              </a>
+              <a href="https://www.instagram.com/p/DcRNwcaRXHr/" target="_blank" rel="noopener" class="press-pill">
+                📸 Registro Instagram ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NOTICIA 4: FONDEF -->
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-tag tag-research">Investigación & Ciencia</span>
+            <time class="news-date">Mayo 2025</time>
+          </div>
+          <h3 class="news-title">
+            Lanzamiento Oficial de la Guía de Infraestructura Verde Urbana para Mitigación Térmica
+          </h3>
+          <p class="news-source">Proyecto FONDEF ID23I10318 · ANID / Pontificia Universidad Católica de Chile</p>
+          <p class="news-summary">
+            Publicación oficial de la <em>"Guía de Diseño de Infraestructura Verde Urbana de baja Altura para Enfriar las Ciudades"</em> (DOI: 10.7764/978-956-425-393-0), integrando vuelos aerofotogramétricos y termografía de precisión para la toma de decisiones en planificación urbana y mitigación de islas de calor.
+          </p>
+          <a href="https://doi.org/10.7764/978-956-425-393-0" target="_blank" rel="noopener" class="news-link">
+            Ver publicación y documento oficial ↗
+          </a>
+        </article>
+
+        <!-- NOTICIA 5: CIPYCS -->
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-tag tag-industry">Innovación en Construcción</span>
+            <time class="news-date">2025 — 2026</time>
+          </div>
+          <h3 class="news-title">
+            Aseguramiento de Calidad (QA/QC) e Instrumentación Avanzada en CIPYCS
+          </h3>
+          <p class="news-source">Centro Interdisciplinario para la Productividad y Construcción Sustentable</p>
+          <p class="news-summary">
+            Validación de metodologías de medición empírica y despliegue de sistemas de adquisición de datos (DAQ) para control de calidad, ensayos estructurales y monitoreo de variables físicas en proyectos de edificación sustentable e industrializada.
+          </p>
+          <div class="news-highlights">
+            <span class="highlight-item">✓ Calibración y DAQ Keysight</span>
+            <span class="highlight-item">✓ Protocolos de aseguramiento QA/QC</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PUBLICACIONES DESTACADAS -->
+    <section id="publications">
+      <h2>Publicaciones & Aportes Técnicos</h2>
+      <div class="publication-card">
+        <div class="pub-header">
+          <h3>Guía de Diseño de Infraestructura Verde Urbana de baja Altura para Enfriar las Ciudades</h3>
+          <span class="pub-year">2025</span>
+        </div>
+        <p class="pub-authors">Colaboración Técnica en Fotogrametría y Análisis Espacial · Proyecto FONDEF ID23I10318</p>
+        <p class="pub-desc">
+          Integración de datos aerofotogramétricos y termografía de alta precisión para el diagnóstico de confort térmico y modelado de infraestructura urbana.
+        </p>
+        <a href="https://doi.org/10.7764/978-956-425-393-0" target="_blank" rel="noopener" class="doi-link">
+          <strong>DOI:</strong> 10.7764/978-956-425-393-0 ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section id="experience">
+      <h2>Experiencia Profesional</h2>
+
+      <div class="timeline">
+
+        <!-- MFS -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="timeline-role">
+              <h3>Profesional de Obra y Control de Calidad</h3>
+              <span class="company-name">Constructora MFS</span>
+            </div>
+            <span class="timeline-period">02/2026 — Actual · Lo Barnechea, Chile</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Gestión integral de la calidad de ejecución (QA/QC), supervisión técnica en terreno y control estricto de procesos constructivos.</li>
+            <li>Administración de recursos, coordinación técnica de subcontratos y aseguramiento del cumplimiento de normativas técnicas y especificaciones de proyecto.</li>
+          </ul>
+        </div>
+
+        <!-- MISIÓN VENEZUELA -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="timeline-role">
+              <h3>Inspección Técnica Post-Sismo</h3>
+              <span class="company-name">Misión Internacional de Apoyo Técnico · Cancillería (Minrel) & UC</span>
+            </div>
+            <span class="timeline-period">08/2026 · Catia La Mar, La Guaira, Venezuela</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Misión internacional de apoyo técnico al Gobierno de Venezuela tras el terremoto de junio de 2026.</li>
+            <li>Realización de levantamientos fotogramétricos mediante el uso de drones para la evaluación rápida y precisa de zonas afectadas.</li>
+            <li>Participación activa en análisis estructurales y diagnóstico del estado de edificios afectados por el evento sísmico.</li>
+          </ul>
+          <div class="timeline-press-links">
+            <span class="timeline-press-label">Prensa:</span>
+            <a href="https://www.uc.cl/noticias/uc-organiza-mision-para-evaluar-danos-estructurales-tras-terremotos-en-venezuela/" target="_blank" rel="noopener">UC Noticias ↗</a> ·
+            <a href="https://www.latercera.com/nacional/noticia/delegacion-de-expertos-viajara-a-venezuela-para-apoyar-en-evaluacion-y-reconstruccion-tras-los-terremotos/" target="_blank" rel="noopener">La Tercera ↗</a> ·
+            <a href="https://www.radioagricultura.cl/noticias/internacional/cancilleria-y-universidad-catolica-envian-expertos-a-venezuela-tras-danos-por-terremotos_20260814/" target="_blank" rel="noopener">Radio Agricultura ↗</a> ·
+            <a href="https://www.adnradio.cl/2026/08/14/chile-exporta-su-ingenieria-antisismica-delegacion-de-la-uc-viaja-a-venezuela-para-evaluar-estructuras-tras-terremotos/" target="_blank" rel="noopener">Radio ADN ↗</a>
+          </div>
+        </div>
+
+        <!-- CIPYCS -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="timeline-role">
+              <h3>Ingeniero de Proyecto y Asistente Técnico (QA/QC e Instrumentación)</h3>
+              <span class="company-name">CIPYCS (Centro Interdisciplinario para la Productividad y Construcción Sustentable)</span>
+            </div>
+            <span class="timeline-period">03/2025 — 01/2026 · Santiago, Chile</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Diseño, ejecución y validación de metodologías de medición empírica en laboratorio y terreno, asegurando el aseguramiento y control de calidad de datos (QA/QC).</li>
+            <li>Instalación, calibración y configuración de sistemas de adquisición de datos (DAQ), operando plataformas de instrumentación de precisión como Keysight BenchVue.</li>
+            <li>Análisis de datos de instrumentación, monitoreo de variables físicas y elaboración de informes técnicos especializados.</li>
+          </ul>
+        </div>
+
+        <!-- FONDEF -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="timeline-role">
+              <h3>Asistente de Investigación (Fotogrametría y Análisis Espacial)</h3>
+              <span class="company-name">Proyecto FONDEF ID23I10318</span>
+            </div>
+            <span class="timeline-period">09/2024 — 05/2025 · Santiago, Chile</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Planificación y ejecución de misiones de vuelo con drones para la captura de datos fotogramétricos y termográficos en terreno.</li>
+            <li>Procesamiento de ortofotos térmicas y modelos digitales de elevación mediante Agisoft Metashape y análisis espacial en ArcGIS Pro.</li>
+            <li>Integración de datos geoespaciales para la evaluación de infraestructura verde urbana, resultando en publicación científica indexada.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMPETENCIAS TÉCNICAS -->
+    <section id="skills">
+      <h2>Competencias Técnicas</h2>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>🌐 Fotogrametría & Geodesia</h4>
+          <p>Operación RPA (Serie Mavic, Serie Matrice, Serie Mini), Agisoft Metashape, ArcGIS Pro, WebODM, AutoCAD Civil 3D. Operación de receptores GNSS RTK, estaciones totales y conexiones de corrección NTRIP.</p>
+        </div>
+
+        <div class="skill-category">
+          <h4>📐 QA / QC & Control de Datos</h4>
+          <p>Calibración de instrumentación, validación de datos capturados (Keysight BenchVue), control de calidad de procesos técnicos en terreno y aseguramiento de tolerancias métricas.</p>
+        </div>
+
+        <div class="skill-category">
+          <h4>💻 Desarrollo & Automatización</h4>
+          <p>Programación en Python para procesamiento y análisis de datos espaciales, automatización de flujos en Google Apps Script, administración y operación en entornos Linux (Kubuntu, Ubuntu).</p>
+        </div>
+
+        <div class="skill-category">
+          <h4>📡 Comunicaciones Críticas</h4>
+          <p>Operación de radiocomunicaciones VHF y UHF, comunicación satelital, teléfonos satelitales, módems BGAN y enlaces Starlink para operaciones remotas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICACIONES & HABILITACIONES -->
+    <section id="certifications">
+      <h2>Certificaciones & Licencias</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-badge-icon">🚁</div>
+          <div class="cert-info">
+            <h3>Licencia de Operador RPA (Drones)</h3>
+            <span class="cert-issuer">Dirección General de Aeronáutica Civil (DGAC Chile)</span>
+            <p>Habilitación oficial para operaciones aéreas con aeronaves pilotadas a distancia. <strong>Vigencia: 01/2028</strong>.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">📻</div>
+          <div class="cert-info">
+            <h3>Licencia de Radioaficionado (CA3DGZ)</h3>
+            <span class="cert-issuer">Subsecretaría de Telecomunicaciones (SUBTEL)</span>
+            <p>Clase Novicio · Indicativo oficial: <strong>CA3DGZ</strong>. Vigente hasta 25/06/2026.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">🚗</div>
+          <div class="cert-info">
+            <h3>Licencia de Conducir</h3>
+            <span class="cert-issuer">Ministerio de Transportes y Telecomunicaciones</span>
+            <p>Clase B vigente para traslados y faenas en terreno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIDGET TÉCNICO INTERACTIVO: SIMULADOR FOTOGRAMÉTRICO -->
+    <aside class="interactive-aside" id="simulator" aria-label="Herramienta interactiva de fotogrametría">
+      <div class="interactive-header">
+        <span class="badge-tech">Herramienta Interactiva</span>
+        <h3>Simulador de Parámetros Fotogramétricos (GSD & Escala)</h3>
+      </div>
+      <p class="interactive-description">
+        Calcula la resolución espacial en terreno (<strong>GSD</strong>) y la huella del sensor según la altura de vuelo para planificación de misiones con RPA:
+      </p>
+
+      <div class="calculator-grid">
+        <div class="calc-control">
+          <label for="sensor-select">Sensor / Dron:</label>
+          <select id="sensor-select" onchange="calculateGSD()">
+            <optgroup label="Drones Compactos de Mapeo">
+              <option value="mavic3_ent" selected>DJI Mavic 3 Enterprise (M3E) · 4/3" CMOS 20MP (12.3mm)</option>
+              <option value="mavic3_multispectral">DJI Mavic 3 Multispectral (M3M) · 4/3" CMOS 20MP</option>
+              <option value="mavic3_thermal_rgb">DJI Mavic 3 Thermal (M3T) · Gran Angular 48MP (4.4mm)</option>
+            </optgroup>
+            <optgroup label="Sistemas Industriales & Topografía Pesada">
+              <option value="matrice_4e">DJI Matrice 4E (M4E Surveying) · 4/3" CMOS 20MP</option>
+              <option value="dji_zenmuse_p1">DJI Zenmuse P1 (Matrice 350/300 RTK) · Full Frame 45MP (35mm)</option>
+              <option value="dji_zenmuse_l2_rgb">DJI Zenmuse L2 / L1 (RGB Coaxial LiDAR) · 4/3" 20MP</option>
+              <option value="matrice_30t">DJI Matrice 30T (M30T) · Gran Angular 48MP</option>
+            </optgroup>
+            <optgroup label="Ala Fija & Referencias Geodésicas">
+              <option value="wingtra_rx1r2">WingtraOne GEN II (Sony RX1R II) · Full Frame 42.4MP (35mm)</option>
+              <option value="phantom4_rtk">DJI Phantom 4 RTK · 1" CMOS 20MP (8.8mm)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="calc-control">
+          <label for="flight-height">Altura de Vuelo (H): <span id="height-val">80</span> m</label>
+          <input type="range" id="flight-height" min="20" max="200" value="80" step="5" oninput="calculateGSD()" />
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="result-box">
+          <span class="result-label">GSD Estimado:</span>
+          <span class="result-value" id="res-gsd">2.19 cm/px</span>
+        </div>
+        <div class="result-box">
+          <span class="result-label">Huella en Terreno:</span>
+          <span class="result-value" id="res-footprint">119 × 79 m</span>
+        </div>
+        <div class="result-box">
+          <span class="result-label">Escala Fotográfica:</span>
+          <span class="result-value" id="res-scale">1 : 9,091</span>
+        </div>
+      </div>
+
+      <!-- Comparador Interactivo de Capas (Ortomosaico RGB vs Modelo Digital de Elevaciones) -->
+      <div class="layer-comparator-wrapper">
+        <p class="comparator-caption">Visualización interactiva: <strong>Ortomosaico RGB / Termografía</strong> vs. <strong>MDT / Alticromía</strong></p>
+        <div class="comparison-container" id="compare-container">
+          <div class="layer-base" id="layer-dem">
+            <div class="dem-visual">
+              <div class="contour-grid"></div>
+              <span class="layer-badge dem-badge">Modelo Digital de Elevación (DEM)</span>
+            </div>
+          </div>
+          <div class="layer-overlay" id="layer-rgb">
+            <div class="rgb-visual">
+              <div class="satellite-pattern"></div>
+              <span class="layer-badge rgb-badge">Ortomosaico RGB / Ortofoto</span>
+            </div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="slider-divider" id="layer-slider"
+            oninput="slideLayer(this.value)" aria-label="Deslizador de comparación de capas" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="qr-box" id="qr-container" title="Escanear para abrir en el móvil">
+          <div id="qr-code"></div>
+          <span class="qr-caption">Perfil Digital</span>
+        </div>
+        <div class="footer-text">
+          <p><strong>André Hernán Vargas Peña</strong> · Constructor Civil</p>
+          <p class="footer-subtext">La Florida, Santiago de Chile · and-rh@uc.cl · +56 9 7748 3866</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL / LIGHTBOX DE INSPECCIÓN DE ORTOFOTOS CON ZOOM -->
+    <div id="ortho-modal" class="modal-overlay" aria-hidden="true" onclick="closeModal(event)">
+      <div class="modal-container" onclick="event.stopPropagation()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-badge">Inspección de Ortomosaico</span>
+            <h3 id="modal-title">Sector Residencial</h3>
+          </div>
+          <div class="modal-controls">
+            <button onclick="zoomModal(1.25)" class="modal-btn" title="Acercar (Zoom In)">🔍 +</button>
+            <button onclick="zoomModal(0.8)" class="modal-btn" title="Alejar (Zoom Out)">🔍 −</button>
+            <button onclick="resetZoomModal()" class="modal-btn" title="Restablecer">↺</button>
+            <button onclick="closeModalDirect()" class="modal-btn modal-close-btn" title="Cerrar (Esc)">✕</button>
+          </div>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <div class="modal-img-wrapper" id="modal-wrapper">
+            <img id="modal-img" src="" alt="Ortomosaico en Alta Resolución" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p id="modal-caption" class="modal-caption"></p>
+          <a id="modal-download" href="" download class="modal-download-btn">📥 Descargar Ortofoto Completa</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
