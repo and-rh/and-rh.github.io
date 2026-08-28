@@ -270,6 +270,44 @@ function initModalEvents() {
     }
   });
 
+  // Soporte táctil en móviles (Touch pan y pinch zoom)
+  let initialTouchDistance = 0;
+  let initialScale = 1;
+
+  wrapper.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      isDraggingModal = true;
+      startDragX = e.touches[0].clientX - modalTranslateX;
+      startDragY = e.touches[0].clientY - modalTranslateY;
+    } else if (e.touches.length === 2) {
+      isDraggingModal = false;
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      initialTouchDistance = Math.sqrt(dx * dx + dy * dy);
+      initialScale = modalScale;
+    }
+  }, { passive: true });
+
+  wrapper.addEventListener('touchmove', (e) => {
+    if (isDraggingModal && e.touches.length === 1) {
+      modalTranslateX = e.touches[0].clientX - startDragX;
+      modalTranslateY = e.touches[0].clientY - startDragY;
+      updateModalTransform();
+    } else if (e.touches.length === 2 && initialTouchDistance > 0) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const currentDistance = Math.sqrt(dx * dx + dy * dy);
+      const scaleChange = currentDistance / initialTouchDistance;
+      modalScale = Math.min(Math.max(initialScale * scaleChange, 0.6), 6.0);
+      updateModalTransform();
+    }
+  }, { passive: true });
+
+  wrapper.addEventListener('touchend', () => {
+    isDraggingModal = false;
+    initialTouchDistance = 0;
+  }, { passive: true });
+
   // Cerrar con tecla Escape o Zoom con teclas + / -
   window.addEventListener('keydown', (e) => {
     const modal = document.getElementById('ortho-modal');
