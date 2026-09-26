@@ -1372,6 +1372,191 @@ input[type="range"] {
   color: var(--color-slate-500);
 }
 
+/* ── EXPERIENCIA DOCENTE & AYUDANTÍAS (UC) ────────────────────────────────── */
+.teaching-support-section {
+  margin-top: 24px;
+  background: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: clamp(16px, 3.5vw, 24px);
+}
+
+.teaching-header {
+  margin-bottom: 18px;
+}
+
+.badge-teaching {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0369a1;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.teaching-title {
+  font-size: clamp(1.02rem, 2.2vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.teaching-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+}
+
+.teaching-card {
+  background: #ffffff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  padding: clamp(14px, 3vw, 20px);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.teaching-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-primary-border);
+}
+
+.teaching-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.teaching-tags-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.teaching-badge-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.teaching-role-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.teaching-period {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-slate-500);
+}
+
+.teaching-course-title {
+  font-size: clamp(0.98rem, 2.2vw, 1.1rem);
+  font-weight: 700;
+  color: var(--color-slate-900);
+  line-height: 1.38;
+  margin-bottom: 10px;
+}
+
+.teaching-inst-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--color-slate-700);
+  background: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.teaching-icon {
+  font-size: 1.1rem;
+}
+
+.teaching-desc {
+  font-size: 0.9rem;
+  color: var(--color-slate-700);
+  line-height: 1.58;
+  margin-bottom: 12px;
+}
+
+.teaching-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teaching-bullet-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  color: var(--color-slate-700);
+  line-height: 1.5;
+}
+
+.teaching-bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.teaching-bullet-list li strong {
+  color: var(--color-slate-900);
+}
+
+.teaching-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-slate-100);
+}
+
+.teaching-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  border: 1px solid var(--color-slate-200);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
 /* ── EXPERIENCIA LABORAL (TIMELINE RESPONSIVE) ────────────────────────────── */
 .timeline {
   position: relative;
